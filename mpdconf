@@ -1,0 +1,32 @@
+# Setup:
+#
+# sudo apt-get install mpd mpc
+# sudo gpasswd -a jmcfarlane pulse-access
+# mkdir -p ~/.mpd/playlists
+# ln -s ~/repo/mpdconf ~/.mpdconf
+# mpd
+# mpc find artist "Katy Perry" | mpc add
+# mpc play
+#
+
+# Inputs
+bind_to_address     127.0.0.1
+filesystem_charset  UTF-8
+id3v1_encoding      UTF-8
+user                jmcfarlane
+music_directory     ~/Music
+
+# Outputs
+error_file          ~/.mpd/error.log
+playlist_directory  ~/.mpd/playlists
+db_file             ~/.mpd/mpd.db
+log_file            ~/.mpd/mpd.log
+pid_file            ~/.mpd/mpd.pid
+state_file          ~/.mpd/mpd.state
+
+# Audio
+audio_output {
+   type             "pulse"
+   name             "My Pulse Output"
+}
+
