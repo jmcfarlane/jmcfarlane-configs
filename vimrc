@@ -5,7 +5,6 @@ set incsearch                       " Do incremental searching
 set listchars=trail:.,tab:>-,eol:$  " What characters to show with F2
 set nocompatible                    " Use vim defaults
 set shiftwidth=4                    " Number of spaces per (auto) indent
-""" set smartindent                     " Smart indent
 set softtabstop=4                   " Use spaces as tab for BACKSPACE/DELETE
 set tabstop=4                       " Number of spaces per tab
 set textwidth=70                    " Wrap safely at an 80 char margin
@@ -22,8 +21,8 @@ set tabpagemax=20                   " Allow up to 20 files to be open in tabs
 set showtabline=2                   " Always show tabs at the top
 
 map <silent> <F2> :set invlist<CR>		" Show/hide hidden Chars
-map <silent> <F3> :set invhlsearch<CR>	" Show/hide found pattern
-" Leave F4 alone (used by ctags)
+map <silent> <F3> :cn<CR>	            " Next match in the QuickList
+map <silent> <F4> :set invhlsearch<CR>	" Show/hide found pattern
 map <silent> <F5> :source ~/.vimrc<CR>	" Reload .vimrc
 map <silent> <F6> :set nonumber!<CR>	" Show/hide line numbers
 map <silent> <F8> gwap                  " Format paragraph
@@ -44,7 +43,7 @@ autocmd BufNewFile,BufRead *.json set ft=javascript
 colorscheme evening
 syntax on
 
-" automatically remove trailing whitespace before write
+" Automatically remove trailing whitespace before write
 function! StripTrailingWhitespace()
     normal mZ
     %s/\s\+$//e
@@ -67,7 +66,7 @@ let Tlist_Use_Horiz_Window = 0      " Displays taglist results in a vertical win
 
 " Shorter commands to toggle Taglist display
 nnoremap TT :TlistToggle<CR>
-map <F4> :TlistToggle<CR>
+map <F10> :TlistToggle<CR>
 
 " Various Taglist diplay config:
 let Tlist_Use_Right_Window = 1
