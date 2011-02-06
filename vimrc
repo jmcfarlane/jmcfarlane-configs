@@ -23,7 +23,9 @@ set showtabline=2                   " Always show tabs at the top
 
 map <silent> <F2> :set invlist<CR>		" Show/hide hidden Chars
 map <silent> <F3> :set invhlsearch<CR>	" Show/hide found pattern
+" Leave F4 alone (used by ctags)
 map <silent> <F5> :source ~/.vimrc<CR>	" Reload .vimrc
+map <silent> <F6> :set nonumber!<CR>	" Show/hide line numbers
 map <silent> <F8> gwap                  " Format paragraph
 map <C-Tab> :tabn<CR>
 map <S-C-Tab> :tabp<CR>
@@ -52,3 +54,25 @@ function! StripTrailingWhitespace()
     normal `Z
 endfunction
 autocmd BufWritePre * :call StripTrailingWhitespace()
+
+" Python syntax highlighting
+filetype plugin indent on
+autocmd FileType python set complete+=k~/.vim/syntax/python.vim isk+=.,(
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Taglist variables
+let g:ctags_statusline = 1          " Display function name in status bar:
+let generate_tags = 1               " Automatically start script
+let Tlist_Use_Horiz_Window = 0      " Displays taglist results in a vertical window:
+
+" Shorter commands to toggle Taglist display
+nnoremap TT :TlistToggle<CR>
+map <F4> :TlistToggle<CR>
+
+" Various Taglist diplay config:
+let Tlist_Use_Right_Window = 1
+let Tlist_Compact_Format = 1
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_File_Fold_Auto_Close = 1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
