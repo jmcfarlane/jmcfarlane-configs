@@ -102,3 +102,10 @@ ${offset 240}${color}Up: ${color }${upspeed eth0} k/s
 ${offset 240}${upspeedgraph eth0 20,130 000000 ffffff}
 ${offset 240}${color}Down: ${color }${downspeed eth0}k/s${color}
 ${offset 240}${downspeedgraph eth0 20,130 000000 ffffff}
+
+${offset 240}${color slate grey}Currently playing:${color}
+${offset 240}${mpd_artist} (${mpd_status})
+${offset 240}${mpd_album}
+${offset 240}${mpd_title 30}
+${offset 240}Volume: ${mpd_vol}
+${offset 240}${mpd_bar}
