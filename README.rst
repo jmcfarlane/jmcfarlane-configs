@@ -7,7 +7,7 @@ The first step is to clone this repo::
  git clone git://github.com/jmcfarlane/jmcfarlane-configs.git ~/dev/Configs
 
 Conky
-+++
++++++
 
 Simple, but useful::
 
@@ -28,7 +28,7 @@ The awesome mpd ran as non root user::
  ln -s ~/dev/Configs/mpdconf ~/.mpdconf
 
 Screen
-+++
+++++++
 
 Make screen a bit easier to use::
 
