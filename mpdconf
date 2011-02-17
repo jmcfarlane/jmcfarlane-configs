@@ -1,6 +1,8 @@
 # Setup:
 #
 # sudo apt-get install mpd mpc
+# sudo service mpd stop
+# sudo update-rc.d -f mpd remove
 # sudo gpasswd -a jmcfarlane pulse-access
 # mkdir -p ~/.mpd/playlists
 # ln -s ~/repo/mpdconf ~/.mpdconf
