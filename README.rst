@@ -37,6 +37,10 @@ Make screen a bit easier to use::
 Vim
 +++
 
+Install the dependencies::
+
+ sudo apt-get install pyflakes exuberant-ctags
+
 Vim with a few settings specific to Python::
 
  ln -s ~/dev/Configs/vimrc ~/.vimrc
