@@ -22,3 +22,11 @@ if [ "$(which keychain)" != '' ]; then
     fi
 fi
 
+# Fix gvim menu support for Natty (this is temporary)
+function gvim () { /usr/bin/gvim -f $* & }
+
+# Mpc bash completion
+f=/usr/share/doc/mpc/mpc-completion.bash
+if [ -f $f ]; then
+    . $f
+fi
