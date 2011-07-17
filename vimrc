@@ -19,7 +19,9 @@ set nopaste                         " Don't use ai when pasting
 set guioptions-=T                   " Don't show the gvim toolbar
 set tabpagemax=20                   " Allow up to 20 files to be open in tabs
 set showtabline=2                   " Always show tabs at the top
-set clipboard=unnamed               " Use the system clipboard
+
+"" This is handy, but breaks typical yank and paste
+""set clipboard=unnamed               " Use the system clipboard
 
 map <silent> <F2> :set invlist<CR>		" Show/hide hidden Chars
 map <silent> <F3> :cn<CR>	            " Next match in the QuickList
@@ -55,9 +57,8 @@ function! StripTrailingWhitespace()
 endfunction
 autocmd BufWritePre * :call StripTrailingWhitespace()
 
-" Python syntax highlighting
+" Python stuff
 filetype plugin indent on
-autocmd FileType python set complete+=k~/.vim/syntax/python.vim isk+=.,(
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Taglist variables
