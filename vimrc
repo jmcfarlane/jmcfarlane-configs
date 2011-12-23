@@ -31,6 +31,7 @@ map <silent> <F6> :set nonumber!<CR>	" Show/hide line numbers
 map <silent> <F8> gwap                  " Format paragraph
 map <C-Tab> :tabn<CR>
 map <S-C-Tab> :tabp<CR>
+map <silent> ,h :w !python<CR>
 
 " Special settings:
 au BufRead,BufNewFile *.c,*.h set noexpandtab
