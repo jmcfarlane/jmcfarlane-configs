@@ -19,6 +19,8 @@ set nopaste                         " Don't use ai when pasting
 set guioptions-=T                   " Don't show the gvim toolbar
 set tabpagemax=20                   " Allow up to 20 files to be open in tabs
 set showtabline=2                   " Always show tabs at the top
+set wildmode=longest,list,full      " Bash (+extra) style file tab completion
+set wildmenu                        " Enable ^
 
 "" This is handy, but breaks typical yank and paste
 ""set clipboard=unnamed               " Use the system clipboard
@@ -38,10 +40,12 @@ au BufRead,BufNewFile *.c,*.h set noexpandtab
 au BufRead,BufNewFile Makefile* set noexpandtab
 au BufRead,BufNewFile *.conf,*.css,*.js,*.tpl,*.tmpl set sw=2 sts=2 ts=2
 au BufRead,BufNewFile *.html,*.rst,*.xml,*.xhtml,*.xsl set sw=2 sts=2 ts=2
+au BufRead,BufNewFile *.schema set sw=2 sts=2 ts=2
 au BufRead,BufNewFile *.py set sw=4 sts=4 ts=4
 
 " Syntax highlighting tweaks
 autocmd BufNewFile,BufRead *.json set ft=javascript
+autocmd BufNewFile,BufRead *.js set ft=javascript
 
 " Colors
 colorscheme evening
