@@ -42,6 +42,7 @@ au BufRead,BufNewFile *.conf,*.css,*.js,*.tpl,*.tmpl set sw=2 sts=2 ts=2
 au BufRead,BufNewFile *.html,*.rst,*.xml,*.xhtml,*.xsl set sw=2 sts=2 ts=2
 au BufRead,BufNewFile *.schema set sw=2 sts=2 ts=2
 au BufRead,BufNewFile *.py set sw=4 sts=4 ts=4
+au BufRead,BufNewFile *.clj set sw=2 sts=2 ts=2
 
 " Syntax highlighting tweaks
 autocmd BufNewFile,BufRead *.json set ft=javascript
@@ -67,3 +68,17 @@ filetype plugin indent on
 
 " Enable pymode's custom syntax highlighting
 let g:pymode_syntax = 1
+
+" Let's stop being so old and crufty
+call pathogen#infect()
+call pathogen#helptags()
+
+" git://github.com/guns/vim-clojure-static.git
+let g:clojure_maxlines = 1000
+let g:clojure_fuzzy_indent_patterns = "with.*,def.*,let.*,testing"
+
+" git://github.com/kien/rainbow_parentheses.vim.git
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
