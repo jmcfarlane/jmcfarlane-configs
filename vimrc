@@ -63,21 +63,18 @@ function! StripTrailingWhitespace()
 endfunction
 autocmd BufWritePre * :call StripTrailingWhitespace()
 
-" Python stuff
-filetype plugin indent on
-
-" Enable pymode's custom syntax highlighting
-let g:pymode_syntax = 1
-
 " Let's stop being so old and crufty
 call pathogen#infect()
 call pathogen#helptags()
 
-" git://github.com/guns/vim-clojure-static.git
+" Python stuff
+filetype plugin indent on
+
+" https://github.com/guns/vim-clojure-static.git
 let g:clojure_maxlines = 1000
 let g:clojure_fuzzy_indent_patterns = "with.*,def.*,let.*,testing"
 
-" git://github.com/kien/rainbow_parentheses.vim.git
+" https://github.com/kien/rainbow_parentheses.vim.git
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
