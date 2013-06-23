@@ -38,7 +38,7 @@ map <silent> ,h :w !python<CR>
 " Special settings:
 au BufRead,BufNewFile *.c,*.h set noexpandtab
 au BufRead,BufNewFile Makefile* set noexpandtab
-au BufRead,BufNewFile *.conf,*.css,*.js,*.tpl,*.tmpl set sw=2 sts=2 ts=2
+au BufRead,BufNewFile *.conf,*.css,*.json,*.js,*.tpl,*.tmpl set sw=2 sts=2 ts=2
 au BufRead,BufNewFile *.html,*.rst,*.xml,*.xhtml,*.xsl set sw=2 sts=2 ts=2
 au BufRead,BufNewFile *.schema set sw=2 sts=2 ts=2
 au BufRead,BufNewFile *.py set sw=4 sts=4 ts=4
