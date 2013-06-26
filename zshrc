@@ -47,6 +47,7 @@ alias 'cp=cp -i'
 
 # Graphical programs
 alias 'gedit=z gedit'
+alias -g 'xclip=xclip -se c'
 
 # Git
 alias 'm=z meld .'
@@ -77,8 +78,8 @@ fi
 
 # tcc
 export PATH=~/dev/weatherbill/tools:$PATH
-export WB_ROOT="~/dev"
+export WB_ROOT=~/dev
 
 # Go
-export GOROOT="$HOME/go"
+export GOROOT=$HOME/go
 export PATH=$PATH:$GOROOT/bin
