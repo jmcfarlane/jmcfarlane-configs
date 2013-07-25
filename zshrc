@@ -63,7 +63,7 @@ z () {
 }
 
 # Path
-export PATH=${PATH}:~/dev/Scripts
+export PATH=${PATH}:~/dev/scripts
 
 # Keychain
 if [ "$(which keychain)" != '' ]; then

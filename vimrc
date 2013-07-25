@@ -21,6 +21,7 @@ set tabpagemax=20                   " Allow up to 20 files to be open in tabs
 set showtabline=2                   " Always show tabs at the top
 set wildmode=longest,list,full      " Bash (+extra) style file tab completion
 set wildmenu                        " Enable ^
+set noswapfile                      " Don't use swap files
 
 "" This is handy, but breaks typical yank and paste
 ""set clipboard=unnamed               " Use the system clipboard
