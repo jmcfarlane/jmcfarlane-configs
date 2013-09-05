@@ -17,14 +17,14 @@ set showmode                        " display mode (INSERT/REPLACE/etc.)
 set guifont=Liberation\ Mono\ 9     " Liberation Mono size 9
 set nopaste                         " Don't use ai when pasting
 set guioptions-=T                   " Don't show the gvim toolbar
-set tabpagemax=20                   " Allow up to 20 files to be open in tabs
-set showtabline=2                   " Always show tabs at the top
-set wildmode=longest,list,full      " Bash (+extra) style file tab completion
-set wildmenu                        " Enable ^
-set noswapfile                      " Don't use swap files
 
-"" This is handy, but breaks typical yank and paste
-""set clipboard=unnamed               " Use the system clipboard
+" Bash (+extra) style file tab completion
+set wildmenu
+set wildmode=longest,list,full
+
+" Don't clutter my dirs up with swp and tmp files
+set backupdir=/tmp
+set directory=/tmp
 
 map <silent> <F2> :set invlist<CR>		" Show/hide hidden Chars
 map <silent> <F3> :cn<CR>	            " Next match in the QuickList
@@ -32,8 +32,8 @@ map <silent> <F4> :set invhlsearch<CR>	" Show/hide found pattern
 map <silent> <F5> :source ~/.vimrc<CR>	" Reload .vimrc
 map <silent> <F6> :set nonumber!<CR>	" Show/hide line numbers
 map <silent> <F8> gwap                  " Format paragraph
-map <C-Tab> :tabn<CR>
-map <S-C-Tab> :tabp<CR>
+map <C-Tab> :bn<CR>
+map <S-C-Tab> :bp<CR>
 map <silent> ,h :w !python<CR>
 
 " Special settings:
@@ -68,12 +68,20 @@ autocmd BufWritePre * :call StripTrailingWhitespace()
 call pathogen#infect()
 call pathogen#helptags()
 
+" Leader
+let mapleader = ","
+
 " Python stuff
 filetype plugin indent on
 
 " https://github.com/guns/vim-clojure-static.git
 let g:clojure_maxlines = 1000
 let g:clojure_fuzzy_indent_patterns = "with.*,def.*,let.*,testing"
+
+" ctrlp.vim
+map <Leader>b :CtrlPBuffer<CR>
+map <Leader>f :CtrlP .<CR>
+map <Leader>p :CtrlP<CR>
 
 " https://github.com/kien/rainbow_parentheses.vim.git
 au VimEnter * RainbowParenthesesToggle
