@@ -79,6 +79,7 @@ let g:clojure_maxlines = 1000
 let g:clojure_fuzzy_indent_patterns = "with.*,def.*,let.*,testing"
 
 " ctrlp.vim
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,target,*/build/*
 map <Leader>b :CtrlPBuffer<CR>
 map <Leader>f :CtrlP .<CR>
 map <Leader>p :CtrlP<CR>
