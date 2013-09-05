@@ -83,6 +83,10 @@ map <Leader>b :CtrlPBuffer<CR>
 map <Leader>f :CtrlP .<CR>
 map <Leader>p :CtrlP<CR>
 
+" syntastic
+" sudo apt-get install python-pep8 python-pyflakes
+let g:syntastic_python_checkers = ['pep8', 'pyflakes', 'python']
+
 " https://github.com/kien/rainbow_parentheses.vim.git
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
