@@ -36,6 +36,10 @@ map <C-Tab> :bn<CR>
 map <S-C-Tab> :bp<CR>
 map <silent> ,h :w !python<CR>
 
+" When I hit F1 I usually mean to hit escape
+map <F1> <Esc>
+imap <F1> <Esc>
+
 " Special settings:
 au BufRead,BufNewFile *.c,*.h set noexpandtab
 au BufRead,BufNewFile Makefile* set noexpandtab
