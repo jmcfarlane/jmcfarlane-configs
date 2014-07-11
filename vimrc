@@ -44,6 +44,7 @@ au BufRead,BufNewFile *.html,*.rst,*.xml,*.xhtml,*.xsl set sw=2 sts=2 ts=2
 au BufRead,BufNewFile *.schema set sw=2 sts=2 ts=2
 au BufRead,BufNewFile *.py set sw=4 sts=4 ts=4
 au BufRead,BufNewFile *.clj set sw=2 sts=2 ts=2
+au BufRead,BufNewFile *.yml set sw=2 sts=2 ts=2
 
 " Syntax highlighting tweaks
 autocmd BufNewFile,BufRead *.json set ft=javascript
@@ -80,7 +81,7 @@ let g:clojure_fuzzy_indent_patterns = "with.*,def.*,let.*,testing"
 
 " ctrlp.vim
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,target,*/build/*
-map <Leader>b :CtrlPBuffer<CR>
+map <Leader>bb :CtrlPBuffer<CR>
 map <Leader>f :CtrlP .<CR>
 map <Leader>p :CtrlP<CR>
 

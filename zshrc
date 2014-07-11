@@ -48,6 +48,7 @@ alias 'cp=cp -i'
 # Graphical programs
 alias 'gedit=z gedit'
 alias -g 'xclip=xclip -se c'
+alias 'open=gnome-open'
 
 # Git
 alias 'm=z meld .'
@@ -55,7 +56,7 @@ alias 's=git status'
 
 # Tcc
 alias 'wb=cd ~/dev/weatherbill'
-alias 'puppet=cd ~/dev/wb-puppet'
+alias 'puppet=cd ~/dev/puppet'
 
 # Automatically background processes (no output to terminal etc)
 z () {
@@ -81,5 +82,6 @@ export PATH=~/dev/weatherbill/tools:$PATH
 export WB_ROOT=~/dev
 
 # Go
-export GOROOT=$HOME/go
-export PATH=$PATH:$GOROOT/bin
+export GOPATH=$HOME/dev/go
+export GOROOT=$HOME/go  # Because I don't use /usr/local/go
+export PATH=$PATH:$HOME/go/bin:$GOPATH/bin
