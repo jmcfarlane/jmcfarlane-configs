@@ -44,6 +44,7 @@ alias 'cp=cp -i'
 
 
 # Short command aliases
+alias -g 'history=history 1'
 
 # Graphical programs
 alias 'gedit=z gedit'
