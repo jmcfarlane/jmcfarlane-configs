@@ -50,6 +50,7 @@ alias -g 'history=history 1'
 alias 'gedit=z gedit'
 alias -g 'xclip=xclip -se c'
 alias 'open=gnome-open'
+alias 'screenshot=gnome-screenshot -c -d 5'
 
 # Git
 alias 'm=z meld .'
