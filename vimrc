@@ -14,7 +14,7 @@ set ruler                           " Show the ruler all the time
 set rulerformat=%l/%L(%p%%),%c      " A better ruler
 set showmatch                       " show matching brackets
 set showmode                        " display mode (INSERT/REPLACE/etc.)
-set guifont=Liberation\ Mono\ 9     " Liberation Mono size 9
+set guifont=Liberation\ Mono\ 10     " Liberation Mono size 9
 set nopaste                         " Don't use ai when pasting
 set guioptions-=T                   " Don't show the gvim toolbar
 
@@ -82,6 +82,16 @@ filetype plugin indent on
 " https://github.com/guns/vim-clojure-static.git
 let g:clojure_maxlines = 1000
 let g:clojure_fuzzy_indent_patterns = "with.*,def.*,let.*,testing"
+
+" Improve golang support
+let g:go_fmt_experimental = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+"let g:go_fmt_command = "goimports"
+"let g:go_fmt_fail_silently = 1
 
 " ctrlp.vim
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,target,*/build/*
