@@ -50,6 +50,9 @@ au BufRead,BufNewFile *.py set sw=4 sts=4 ts=4
 au BufRead,BufNewFile *.clj set sw=2 sts=2 ts=2
 au BufRead,BufNewFile *.yml set sw=2 sts=2 ts=2
 
+"Associate .md with markdown not modula
+au BufRead,BufNewFile *.md set filetype=markdown
+
 " Syntax highlighting tweaks
 autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufNewFile,BufRead *.js set ft=javascript
