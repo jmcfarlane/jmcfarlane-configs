@@ -84,6 +84,6 @@ export PATH=~/dev/weatherbill/tools:$PATH
 export WB_ROOT=~/dev
 
 # Go
-export GOPATH=$HOME/dev/go
-export GOROOT=$HOME/go  # Because I don't use /usr/local/go
-export PATH=$PATH:$HOME/go/bin:$GOPATH/bin
+export GO15VENDOREXPERIMENT=1
+export GOPATH=$HOME/dev/golang
+export PATH=$HOME/golang/bin:$GOPATH/bin:$PATH:/usr/local/go/bin

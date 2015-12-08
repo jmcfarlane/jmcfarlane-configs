@@ -79,22 +79,27 @@ call pathogen#helptags()
 " Leader
 let mapleader = ","
 
-" Python stuff
+" Python
 filetype plugin indent on
 
 " https://github.com/guns/vim-clojure-static.git
 let g:clojure_maxlines = 1000
 let g:clojure_fuzzy_indent_patterns = "with.*,def.*,let.*,testing"
 
-" Improve golang support
+" Golang
 let g:go_fmt_experimental = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-"let g:go_fmt_command = "goimports"
+let g:go_fmt_command = "goimports"
 "let g:go_fmt_fail_silently = 1
+let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
+" Open go doc in vertical window, horizontal, or tab
+au Filetype go nnoremap <leader>v :vsp <CR>:exe "GoDef" <CR>
+au Filetype go nnoremap <leader>s :sp <CR>:exe "GoDef"<CR>
+au Filetype go nnoremap <leader>t :tab split <CR>:exe "GoDef"<CR>
 
 " ctrlp.vim
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,target,*/build/*
@@ -105,9 +110,20 @@ map <Leader>p :CtrlP<CR>
 " syntastic
 " sudo apt-get install python-pep8 python-pyflakes
 let g:syntastic_python_checkers = ['pep8', 'pyflakes', 'python']
+" we want to tell the syntastic module when to run
+" we want to see code highlighting and checks when  we open a file
+" but we don't care so much that it reruns when we close the file
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " https://github.com/kien/rainbow_parentheses.vim.git
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+" Folding
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
