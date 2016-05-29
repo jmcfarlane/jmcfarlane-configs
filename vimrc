@@ -18,6 +18,7 @@ set guifont=Liberation\ Mono\ 10     " Liberation Mono size 9
 set nopaste                         " Don't use ai when pasting
 set guioptions-=T                   " Don't show the gvim toolbar
 set relativenumber                  " Use relative numbers
+set number                          " Use numbers too (hybrid line numbers)
 
 " Bash (+extra) style file tab completion
 set wildmenu
