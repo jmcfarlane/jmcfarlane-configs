@@ -17,6 +17,7 @@ set showmode                        " display mode (INSERT/REPLACE/etc.)
 set guifont=Liberation\ Mono\ 10     " Liberation Mono size 9
 set nopaste                         " Don't use ai when pasting
 set guioptions-=T                   " Don't show the gvim toolbar
+set relativenumber                  " Use relative numbers
 
 " Bash (+extra) style file tab completion
 set wildmenu
