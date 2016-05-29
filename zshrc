@@ -86,4 +86,4 @@ export WB_ROOT=~/dev
 # Go
 export GO15VENDOREXPERIMENT=1
 export GOPATH=$HOME/dev/golang
-export PATH=$HOME/golang/bin:$GOPATH/bin:$PATH:/usr/local/go/bin
+export PATH=$GOPATH/bin:$GOPATH/bin:$PATH:/usr/local/go/bin
