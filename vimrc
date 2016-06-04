@@ -38,6 +38,10 @@ map <C-Tab> :bn<CR>
 map <S-C-Tab> :bp<CR>
 map <silent> ,h :w !python<CR>
 
+" Buffer next/previous
+nnoremap <C-N> :bnext<CR>
+" nnoremap <C-P> :bprev<CR>              " C-P is owned by the search plugin
+
 " When I hit F1 I usually mean to hit escape
 map <F1> <Esc>
 imap <F1> <Esc>
@@ -60,7 +64,7 @@ autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufNewFile,BufRead *.js set ft=javascript
 
 " Colors
-colorscheme evening
+colorscheme molokai
 syntax on
 
 " Automatically remove trailing whitespace before write
